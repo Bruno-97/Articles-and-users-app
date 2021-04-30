@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.vjezbe.javafx.PoslovniKorisnikController">
+   <top>
+      <MenuBar prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Artikli">
+               <items>
+                  <Menu mnemonicParsing="false" text="Automobili">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguAutomobila" text="Pretraga" />
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziUnosAutomobila" text="Unos" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Stanovi">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguStanova" text="Pretraga" />
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziUnosStanova" text="Unos" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Usluge">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguUsluga" text="Pretraga" />
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziUnosUsluga" text="Unos" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Korisnici">
+               <items>
+                  <Menu mnemonicParsing="false" text="Privatni">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguPrivatnihKorisnika" text="Pretraga" />
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziUnosPrivatnihKorisnika" text="Unos" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Poslovni">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziPretraguPoslovnihKorisnika" text="Pretraga" />
+                        <MenuItem mnemonicParsing="false" onAction="#prikaziUnosPoslovnihKorisnika" text="Unos" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <GridPane prefHeight="347.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="64.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="111.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="300.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="10.0" prefWidth="133.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="45.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="17.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" minHeight="35.0" minWidth="400.0" prefHeight="47.0" prefWidth="350.0" text="PRETRAŽIVANJE POSLOVNIH KORISNIKA" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Gabriola" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="135.0" text="Naziv:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="135.0" text="Telefon:" GridPane.columnIndex="1" GridPane.rowIndex="10">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="135.0" text="E-mail:" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="135.0" text="Web:" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="telefonPoslovnogKorisnika" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <TextField fx:id="emailPoslovnogKorisnika" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <TextField fx:id="webPoslovnogKorisnika" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="nazivPoslovnogKorisnika" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pretraziSvePoslovneKorisnike" prefHeight="25.0" prefWidth="148.0" text="Pretraži" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.rowIndex="12">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </left>
+   <bottom>
+      <TableView fx:id="tablePoslovniKorisnik" prefHeight="217.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="nazivPoslovnogKorisnikaColumn" prefWidth="105.0" text="Naziv" />
+            <TableColumn fx:id="webPoslovnogKorisnikaColumn" prefWidth="173.0" text="Web" />
+            <TableColumn fx:id="emailPoslovnogKorisnikaColumn" prefWidth="172.0" text="E-mail" />
+            <TableColumn fx:id="telefonPoslovnogKorisnikaColumn" prefWidth="149.0" text="Telefon" />
+         </columns>
+      </TableView>
+   </bottom>
+</BorderPane>
